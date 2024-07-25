@@ -20,6 +20,7 @@ export default function MouseDemo() {
       <OrbitControls makeDefault />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
       <ambientLight intensity={1.5} />
+      <color args={["#87cefa"]} attach="background" />
 
       {/* SPHERE */}
       <PivotControls anchor={[0, 0, 0]} depthTest={false}>

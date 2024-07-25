@@ -26,7 +26,7 @@ function App() {
           fov: 45,
           near: 0.1,
           far: 200,
-          position: [-3, 5, 12],
+          position: [-3, 3, 8],
         }}
         shadows
       >

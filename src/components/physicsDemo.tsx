@@ -20,6 +20,7 @@ export default function PhysicsDemo() {
 
   return (
     <>
+      <color args={["#87cefa"]} attach="background" />
       <OrbitControls makeDefault />
       <directionalLight
         ref={lightRef}

@@ -40,6 +40,7 @@ export default function TextDemo3D() {
 
   return (
     <>
+      <color args={["#87cefa"]} attach="background" />
       {/* <Perf position="bottom-right" /> */}
       <OrbitControls makeDefault />
       <group ref={donutGroup}>
