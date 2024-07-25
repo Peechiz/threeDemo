@@ -13,14 +13,14 @@ export default function TV(props: TVProps) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.TV.geometry}
+        geometry={(nodes.TV as any).geometry}
         material={props.boxTexture ? undefined : materials.TVMaterial}
       >
         {props.boxTexture && <meshMatcapMaterial matcap={props.boxTexture} />}
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Knob1.geometry}
+          geometry={(nodes.Knob1 as any).geometry}
           material={materials.Knob}
           position={[-1.847, -2.43, 2.179]}
           rotation={[Math.PI / 2, 0, 0]}
@@ -29,7 +29,7 @@ export default function TV(props: TVProps) {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Knob2.geometry}
+          geometry={(nodes.Knob2 as any).geometry}
           material={materials.Knob}
           position={[-1.512, -2.43, 2.179]}
           rotation={[Math.PI / 2, 0, 0]}
@@ -39,7 +39,7 @@ export default function TV(props: TVProps) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Screen.geometry}
+        geometry={(nodes.Screen as any).geometry}
         material={props.screenTexture ? undefined : materials.Screen}
         // material={materials.Screen}
       >

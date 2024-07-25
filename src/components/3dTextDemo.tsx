@@ -5,7 +5,7 @@ import {
   useMatcapTexture,
 } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { Perf } from "r3f-perf";
+// import { Perf } from "r3f-perf";
 import { useEffect, useRef } from "react";
 
 import * as THREE from "three";

@@ -1,4 +1,5 @@
-import { OrbitControls, useHelper } from "@react-three/drei";
+// import { OrbitControls, useHelper } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Physics, RigidBody } from "@react-three/rapier";
 import { useRef } from "react";
 import * as THREE from "three";
@@ -38,16 +39,12 @@ export default function PhysicsDemo() {
         </RigidBody>
 
         {/* CUBE */}
-        {/* <TransformControls object={cubeRef} /> */}
         <RigidBody ref={cube} restitution={0.5}>
           <mesh
             castShadow
             onClick={bounceCube}
-            // ref={cube}
             rotation-y={Math.PI * 0.25}
             position={[2, 0, 0]}
-
-            // onClick={onClick}
           >
             <boxGeometry />
             <meshStandardMaterial color={"mediumpurple"} />

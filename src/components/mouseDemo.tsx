@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PivotControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
@@ -17,18 +17,19 @@ export default function MouseDemo() {
 
   return (
     <>
-      <OrbitControls />
+      <OrbitControls makeDefault />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
       <ambientLight intensity={1.5} />
 
       {/* SPHERE */}
-      <mesh ref={sphere} position-x={-2} onClick={() => onClick(sphere)}>
-        <sphereGeometry />
-        <meshStandardMaterial color={"orange"} />
-      </mesh>
+      <PivotControls anchor={[0, 0, 0]} depthTest={false}>
+        <mesh ref={sphere} position-x={-2}>
+          <sphereGeometry />
+          <meshStandardMaterial color={"orange"} />
+        </mesh>
+      </PivotControls>
 
       {/* CUBE */}
-      {/* <TransformControls object={cubeRef} /> */}
       <mesh
         ref={cube}
         rotation-y={Math.PI * 0.25}
